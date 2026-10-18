@@ -127,7 +127,7 @@ Calculadora web construida como proyecto de práctica con React y Vite, exploran
 
 | Proyecto | Descripción | Lenguaje | Última actualización |
 | --- | --- | --- | --- |
-| [**portfolio**](https://github.com/DiegoCortes07/portfolio) | Portafolio de proyectos - Diego Cortes \| Astro | CSS | 18 oct 2026 |
+| [**portfolio**](https://github.com/DiegoCortes07/portfolio) | Portafolio de proyectos - Diego Cortes \| Astro | TypeScript | 18 oct 2026 |
 
 ---
 
@@ -136,6 +136,6 @@ Calculadora web construida como proyecto de práctica con React y Vite, exploran
 **8** repositorios públicos · **1** estrellas · **6** lenguajes
 
 <sub>🤖 Este README se genera y actualiza automáticamente con GitHub Actions.<br/>
-Última sincronización: 18 de octubre de 2026, 5:33 p. m. (UTC)</sub>
+Última sincronización: 18 de octubre de 2026 a las 5:34 p. m. (UTC)</sub>
 
 </div>
