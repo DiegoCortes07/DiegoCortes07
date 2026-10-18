@@ -42,5 +42,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git commit -m "chore: sincronizar proyectos públicos [skip ci]"
+          git commit -m "chore: sincronizar README del perfil [skip ci]"
+          # Si hubo cambios manuales o de otro run, rebasa antes de publicar.
+          git pull --rebase --autostash origin main
           git push
