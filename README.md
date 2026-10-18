@@ -11,7 +11,7 @@
 
 ## 🧑‍💻 Sobre mí
 
-Construyo software de punta a punta: apps móviles multiplataforma, APIs REST, dashboards de datos y experiencias de realidad aumentada.
+Construyo software de punta a punta: apps móviles multiplataforma, APIs REST y dashboards de datos.
 
 - 🔭 Actualmente trabajando en **apps móviles con React Native + Expo** y **backends con Node.js / Python**
 - 🎓 Estudiante de Ingeniería — Universidad Católica del Norte
