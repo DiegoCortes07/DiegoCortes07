@@ -52,6 +52,8 @@ App multiplataforma (Android, iOS y web) con reproducción de audio en cola, fav
 
 ### 📊 Hackadisc — <sub>Dashboard de ventas con ETL</sub>
 
+> 🥈 **2° lugar en Hackadisc 2026**
+
 KPIs, metas y pronósticos por vendedor con un ETL re-ejecutable de Excel a SQLite, roles de gerencia/ejecutivo y CI completo.
 
 `Python` `FastAPI` `Next.js` `SQLite`
@@ -72,6 +74,6 @@ API REST con migraciones, seeds transaccionales, autenticación con bcrypt y una
 <div align="center">
 
 <sub>🤖 Este README se sincroniza automáticamente con GitHub Actions.<br/>
-Última actualización: 18 de octubre de 2026 a las 5:47 p. m. (UTC)</sub>
+Última actualización: 18 de octubre de 2026, 6:00 p. m. (UTC)</sub>
 
 </div>

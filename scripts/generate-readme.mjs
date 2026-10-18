@@ -33,6 +33,7 @@ const FEATURED = [
     emoji: "📊",
     title: "Hackadisc",
     subtitle: "Dashboard de ventas con ETL",
+    award: "2° lugar en Hackadisc 2026",
     stack: ["Python", "FastAPI", "Next.js", "SQLite"],
     summary:
       "KPIs, metas y pronósticos por vendedor con un ETL re-ejecutable de Excel a SQLite, roles de gerencia/ejecutivo y CI completo.",
@@ -91,6 +92,7 @@ function featuredBlock(item, repo) {
   return [
     `### ${item.emoji} ${item.title} — <sub>${item.subtitle}</sub>`,
     "",
+    ...(item.award ? [`> 🥈 **${item.award}**`, ""] : []),
     item.summary,
     "",
     meta,
