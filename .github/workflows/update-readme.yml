@@ -1,0 +1,46 @@
+name: Update profile README
+
+on:
+  schedule:
+    # Revisa repositorios públicos nuevos o actualizados cada 6 horas.
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/**'
+      - '.github/workflows/**'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-readme
+  cancel-in-progress: true
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Generar README
+        run: node scripts/generate-readme.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Confirmar cambios
+        run: |
+          if [ -z "$(git status --porcelain README.md)" ]; then
+            echo "El README ya está actualizado."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: sincronizar proyectos públicos [skip ci]"
+          git push
