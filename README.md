@@ -72,6 +72,6 @@ API REST con migraciones, seeds transaccionales, autenticación con bcrypt y una
 <div align="center">
 
 <sub>🤖 Este README se sincroniza automáticamente con GitHub Actions.<br/>
-Última actualización: 18 de octubre de 2026, 5:47 p. m. (UTC)</sub>
+Última actualización: 18 de octubre de 2026 a las 5:47 p. m. (UTC)</sub>
 
 </div>
