@@ -116,9 +116,8 @@ async function main() {
     console.warn(`Aviso: no se encontraron estos repositorios: ${missing.join(", ")}`);
   }
 
-  const updatedHuman = new Date().toLocaleString("es-CL", {
+  const updatedHuman = new Date().toLocaleDateString("es-CL", {
     dateStyle: "long",
-    timeStyle: "short",
     timeZone: "UTC",
   });
 
@@ -158,7 +157,7 @@ ${blocks.map((b) => featuredBlock(b.item, b.repo)).join("---\n\n")}
 <div align="center">
 
 <sub>🤖 Este README se sincroniza automáticamente con GitHub Actions.<br/>
-Última actualización: ${updatedHuman} (UTC)</sub>
+Última sincronización: ${updatedHuman}</sub>
 
 </div>
 `;
