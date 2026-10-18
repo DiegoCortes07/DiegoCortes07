@@ -1,141 +1,77 @@
 <div align="center">
 
-# ¡Hola! Soy Diego Cortés 👋
+# Hola, soy Diego Cortés 👋
 
-**Desarrollador Full Stack · Estudiante de Ingeniería**
+**Desarrollador Full Stack** · Construyo productos completos, de la base de datos a la interfaz
 
-[![Portafolio web](https://img.shields.io/badge/Portafolio_web-38bdf8?style=flat-square)](https://diegocortes07.github.io/portfolio/)
-[![GitHub](https://img.shields.io/badge/GitHub-DiegoCortes07-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/DiegoCortes07)
+[![Portafolio](https://img.shields.io/badge/Portafolio-38bdf8?style=for-the-badge&logoColor=white)](https://diegocortes07.github.io/portfolio/)
+[![GitHub](https://img.shields.io/badge/GitHub-DiegoCortes07-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/DiegoCortes07)
 
 </div>
 
-## 🧑‍💻 Sobre mí
+## 👨‍💻 Sobre mí
 
-Construyo software de punta a punta: apps móviles multiplataforma, APIs REST y dashboards de datos.
+Me enfoco en el **desarrollo Full Stack**: me gusta tomar una idea, modelar los datos, exponer una API y entregar una interfaz que se sienta bien. Trabajo cómodo en cualquiera de las tres capas.
 
-- 🔭 Actualmente trabajando en **apps móviles con React Native + Expo** y **backends con Node.js / Python**
-- 🎓 Estudiante de Ingeniería — Universidad Católica del Norte
-- 📊 Me interesa el **análisis de datos** (ETL, dashboards, KPIs) y el **CI/CD**
+Uso la **IA como parte central de mi flujo de trabajo**: agentes de código para implementar y refactorizar, generación asistida de pruebas y documentación, y automatización de tareas repetitivas. No la uso como atajo, sino para sostener un ritmo de trabajo más rápido y con más calidad en cada entrega.
+
+- 🧩 **Full Stack**: TypeScript y Python en el backend, React y React Native en el frontend
+- 🤖 **IA aplicada**: agentes de desarrollo, automatización de flujos y revisión asistida de código
+- ⚙️ **Automatización**: pipelines de CI/CD, ETL de datos y scripts de sincronización
 - 🌐 Portafolio: **[diegocortes07.github.io/portfolio/](https://diegocortes07.github.io/portfolio/)**
 
-## 🛠️ Stack habitual
-
-`TypeScript` `JavaScript` `Python` `C#` `PHP` `React Native` `Expo` `React` `Next.js` `Node.js` `Express` `FastAPI` `Sequelize` `SQLite` `Unity` `GitHub Actions`
-
----
-
-## 🚀 Proyectos destacados
-
-<h3>🎵 <a href="https://github.com/DiegoCortes07/Frontend_Proyecto_Soluciones_Moviles">Frontend_Proyecto_Soluciones_Moviles</a></h3>
-
-> **Tunesly — App móvil tipo Spotify**
-
-Aplicación móvil multiplataforma (Android, iOS y web) tipo Spotify construida con React Native + Expo + TypeScript. Catálogo de música y podcasts, reproductor global con cola, favoritos y playlists contra una API REST propia.
-
-- Reproductor global con **cola de reproducción**, seek y mini-reproductor persistente entre pantallas
-- Autenticación completa: registro, login y verificación de correo con contexto de sesión por token
-- Biblioteca personal con **favoritos optimistas** y playlists con portada, descripción y CRUD de canciones
-- Tema claro/oscuro, idioma, filtro de contenido explícito y plan de suscripción persistidos vía API
-
-`React Native` `Expo` `TypeScript` `React Navigation` `expo-audio` `axios` · **TypeScript**
-
----
-
-<h3>📊 <a href="https://github.com/DiegoCortes07/Hackadisc2026">Hackadisc2026</a></h3>
-
-> **Hackadisc — Dashboard de ventas**
-
-Dashboard de ventas de Insecap: KPIs por vendedor y por equipo, metas, pronóstico de cierre mensual y oportunidades comerciales priorizadas, con vistas separadas para gerencia y ejecutivos.
-
-- ETL re-ejecutable de Excel a SQLite: **24.664 comercializaciones** y **18.570 cotizaciones**
-- Autenticación con roles de gerencia/ejecutivo y seed de usuarios con claves aleatorias
-- CI en GitHub Actions con pytest, lint, typecheck y build del frontend
-- Bandeja de alertas unificada, cartera de clientes, cobranza por antigüedad y exportación a CSV
-
-`Python` `FastAPI` `Next.js` `SQLite` `ETL` `CI/CD` · **Python**
-
----
-
-<h3>⚙️ <a href="https://github.com/DiegoCortes07/Backend-Ayudantia-DSM">Backend-Ayudantia-DSM</a></h3>
-
-> **Backend Ayudantía DSM — API REST educativa**
-
-Backend construido sesión a sesión para las ayudantías de DSM: API REST sobre Express con Sequelize, migraciones, seeds transaccionales y una simulación de delivery en tiempo real con Socket.IO.
-
-- Modelos **Role**, **User** y **Product** con migraciones y asociaciones Sequelize
-- Contraseñas hasheadas con bcrypt y validación de duplicados en una sola query con `Op.or`
-- Seeds ejecutados dentro de una transacción con rollback automático ante errores
-- Simulación pub/sub de ubicación de delivery con **Socket.IO** y salas
-
-`Node.js` `Express` `Sequelize` `SQLite` `Socket.IO` `bcrypt` · **JavaScript**
-
----
-
-<h3>📱 <a href="https://github.com/DiegoCortes07/Frontend-Ayudantia-DSM">Frontend-Ayudantia-DSM</a></h3>
-
-> **Frontend Ayudantía DSM — Expo Router**
-
-Proyecto de apoyo de las ayudantías de DSM con Expo y Expo Router, donde se implementan pantalla a pantalla las funcionalidades del curso.
-
-- Navegación con Expo Router y ruta raíz que redirige a `/login`
-- Pantalla de login con campos controlados y contador para practicar estado en React Native
-- Documentación progresiva por ayudantía dentro del propio README
-
-`React Native` `Expo Router` `JavaScript` · **JavaScript**
-
----
-
-<h3>🕶️ <a href="https://github.com/DiegoCortes07/Proyecto-Rayman-5">Proyecto-Rayman-5</a></h3>
-
-> **Proyecto Rayman 5 — Experiencia de Realidad Aumentada**
-
-Experiencia de Realidad Aumentada desarrollada en Unity, explorando la integración de objetos virtuales sobre entornos físicos reales.
-
-- Desarrollado en **Unity con C#**
-- Experiencia interactiva de AR
-
-`Unity` `C#` `Realidad Aumentada` · **C#** · ⭐ 1
-
----
-
-<h3>🎓 <a href="https://github.com/DiegoCortes07/ProyectoIngSoftware2025-1">ProyectoIngSoftware2025-1</a></h3>
-
-> **Proyecto Ingeniería de Software 2025-1**
-
-Proyecto del curso de Ingeniería de Software, aplicando el ciclo completo de análisis, diseño e implementación de una aplicación web.
-
-- Desarrollado en **PHP** como parte del ramo de Ingeniería de Software
-- Enfoque en levantamiento de requerimientos, modelado y diseño
-
-`PHP` `SQL` `Ingeniería de Software` · **PHP**
-
----
-
-<h3>🧮 <a href="https://github.com/DiegoCortes07/vite-project">vite-project</a></h3>
-
-> **Calculadora React + Vite**
-
-Calculadora web construida como proyecto de práctica con React y Vite, explorando el manejo de estado y la lógica de eventos en el frontend.
-
-- Bundle y dev server con **Vite**
-- Componentes de React con estado controlado
-
-`React` `Vite` `CSS` · **CSS**
----
-
-## 📁 Otros repositorios públicos
-
-| Proyecto | Descripción | Lenguaje | Última actualización |
-| --- | --- | --- | --- |
-| [**portfolio**](https://github.com/DiegoCortes07/portfolio) | Portafolio de proyectos - Diego Cortes \| Astro | TypeScript | 18 oct 2026 |
-
----
+## 🛠️ Stack
 
 <div align="center">
 
-**8** repositorios públicos · **1** estrellas · **6** lenguajes
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logoColor=white)
+![React Native](https://img.shields.io/badge/React_Native-61DAFB?style=for-the-badge&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-5FA04E?style=for-the-badge&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=for-the-badge&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logoColor=white)
 
-<sub>🤖 Este README se genera y actualiza automáticamente con GitHub Actions.<br/>
-Última sincronización: 18 de octubre de 2026 a las 5:34 p. m. (UTC)</sub>
+</div>
+
+## 🚀 Proyectos destacados
+
+### 🎵 Tunesly — <sub>App móvil tipo Spotify</sub>
+
+App multiplataforma (Android, iOS y web) con reproducción de audio en cola, favoritos y playlists contra una API REST propia.
+
+`React Native` `Expo` `TypeScript`
+
+**[→ Ver repositorio](https://github.com/DiegoCortes07/Frontend_Proyecto_Soluciones_Moviles)**
+
+---
+
+### 📊 Hackadisc — <sub>Dashboard de ventas con ETL</sub>
+
+KPIs, metas y pronósticos por vendedor con un ETL re-ejecutable de Excel a SQLite, roles de gerencia/ejecutivo y CI completo.
+
+`Python` `FastAPI` `Next.js` `SQLite`
+
+**[→ Ver repositorio](https://github.com/DiegoCortes07/Hackadisc2026)**
+
+---
+
+### ⚙️ Backend Ayudantía DSM — <sub>API REST en tiempo real</sub>
+
+API REST con migraciones, seeds transaccionales, autenticación con bcrypt y una simulación de delivery por WebSockets.
+
+`Node.js` `Express` `Sequelize` `Socket.IO`
+
+**[→ Ver repositorio](https://github.com/DiegoCortes07/Backend-Ayudantia-DSM)**
+
+
+<div align="center">
+
+<sub>🤖 Este README se sincroniza automáticamente con GitHub Actions.<br/>
+Última actualización: 18 de octubre de 2026, 5:47 p. m. (UTC)</sub>
 
 </div>
