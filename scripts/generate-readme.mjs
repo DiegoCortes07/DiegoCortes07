@@ -23,10 +23,25 @@ const FEATURED = [
     name: "Frontend_Proyecto_Soluciones_Moviles",
     emoji: "🎵",
     title: "Tunesly",
-    subtitle: "App móvil tipo Spotify",
-    stack: ["React Native", "Expo", "TypeScript"],
+    subtitle: "App móvil tipo Spotify (frontend + backend)",
+    stack: ["React Native", "Expo", "TypeScript", "Node.js", "Express", "JWT"],
     summary:
-      "App multiplataforma (Android, iOS y web) con reproducción de audio en cola, favoritos y playlists contra una API REST propia.",
+      "Proyecto full stack completo: app multiplataforma con reproducción de audio en cola, favoritos, playlists, podcasts y verificación por correo, más la API REST con JWT que la alimenta.",
+    /** Repositorios que se muestran juntos en una tabla. */
+    pair: [
+      {
+        role: "Frontend",
+        emoji: "📱",
+        name: "Frontend_Proyecto_Soluciones_Moviles",
+        stack: "React Native · Expo · TypeScript",
+      },
+      {
+        role: "Backend",
+        emoji: "🖥️",
+        name: "Backend_Proyecto_Soluciones_Moviles",
+        stack: "Node.js · Express · Sequelize · JWT",
+      },
+    ],
   },
   {
     name: "Hackadisc2026",
@@ -82,12 +97,31 @@ async function gh(path) {
 const badge = (label, color) =>
   `![${label}](https://img.shields.io/badge/${label.replace(/ /g, "_").replace(/-/g, "--")}-${color}?style=for-the-badge&logoColor=white)`;
 
-function featuredBlock(item, repo) {
-  const url = repo?.html_url ?? `https://github.com/${USER}/${item.name}`;
-  const stars = repo?.stargazers_count ? ` · ⭐ ${repo.stargazers_count}` : "";
+function featuredBlock(item, repos) {
+  const reposByName = new Map(repos.filter(Boolean).map((r) => [r.name, r]));
+  const primary = reposByName.get(item.name);
+  const url = primary?.html_url ?? `https://github.com/${USER}/${item.name}`;
+  const stars = primary?.stargazers_count ? ` · ⭐ ${primary.stargazers_count}` : "";
   const meta = [...item.stack.map((s) => `\`${s}\``), `${stars}`.trim()]
     .filter(Boolean)
     .join(" ");
+
+  // Si el proyecto tiene frontend + backend, se muestran juntos en una tabla.
+  const pairs = item.pair?.filter(
+    (p, i) => i === 0 || reposByName.has(p.name),
+  );
+
+  const links = pairs
+    ? [
+        "| Parte | Repositorio | Stack |",
+        "| :--- | :--- | :--- |",
+        ...pairs.map((p) => {
+          const repo = reposByName.get(p.name);
+          const link = repo ? `[**${p.name}**](${repo.html_url})` : `**${p.name}**`;
+          return `| ${p.emoji} **${p.role}** | ${link} | ${p.stack} |`;
+        }),
+      ].join("\n")
+    : `**[→ Ver repositorio](${url})**`;
 
   return [
     `### ${item.emoji} ${item.title} — <sub>${item.subtitle}</sub>`,
@@ -97,24 +131,31 @@ function featuredBlock(item, repo) {
     "",
     meta,
     "",
-    `**[→ Ver repositorio](${url})**`,
+    links,
     "",
     "",
   ].join("\n");
 }
 
 async function main() {
-  const [user, ...repos] = await Promise.all([
+  const allNames = [
+    ...new Set(FEATURED.flatMap((f) => [f.name, ...(f.pair ?? []).map((p) => p.name)])),
+  ];
+
+  const [user, ...fetched] = await Promise.all([
     gh(`/users/${USER}`),
-    ...FEATURED.map((f) => gh(`/repos/${USER}/${f.name}`)),
+    ...allNames.map((name) => gh(`/repos/${USER}/${name}`)),
   ]);
 
-  const blocks = FEATURED.map((item, i) => ({ item, repo: repos[i] }));
+  const reposByName = new Map(fetched.filter(Boolean).map((r) => [r.name, r]));
+  const repos = [...reposByName.values()];
 
-  const missing = FEATURED.filter((_, i) => repos[i] === null).map((f) => f.name);
+  const missing = allNames.filter((name) => !reposByName.has(name));
   if (missing.length > 0) {
-    console.warn(`Aviso: no se encontraron estos repositorios: ${missing.join(", ")}`);
+    console.warn(`Aviso: no se pudo acceder a estos repositorios: ${missing.join(", ")}`);
   }
+
+  const blocks = FEATURED.map((item) => ({ item, repos }));
 
   const updatedHuman = new Date().toLocaleDateString("es-CL", {
     dateStyle: "long",
@@ -153,7 +194,9 @@ ${STACK.map(([name, color]) => badge(name, color)).join("\n")}
 
 ## 🚀 Proyectos destacados
 
-${blocks.map((b) => featuredBlock(b.item, b.repo)).join("---\n\n")}
+${blocks.map((b) => featuredBlock(b.item, b.repos)).join("---\n\n")}
+---
+
 <div align="center">
 
 <sub>🤖 Este README se sincroniza automáticamente con GitHub Actions.<br/>

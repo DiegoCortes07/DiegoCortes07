@@ -40,13 +40,16 @@ Uso la **IA como parte central de mi flujo de trabajo**: agentes de código para
 
 ## 🚀 Proyectos destacados
 
-### 🎵 Tunesly — <sub>App móvil tipo Spotify</sub>
+### 🎵 Tunesly — <sub>App móvil tipo Spotify (frontend + backend)</sub>
 
-App multiplataforma (Android, iOS y web) con reproducción de audio en cola, favoritos y playlists contra una API REST propia.
+Proyecto full stack completo: app multiplataforma con reproducción de audio en cola, favoritos, playlists, podcasts y verificación por correo, más la API REST con JWT que la alimenta.
 
-`React Native` `Expo` `TypeScript`
+`React Native` `Expo` `TypeScript` `Node.js` `Express` `JWT`
 
-**[→ Ver repositorio](https://github.com/DiegoCortes07/Frontend_Proyecto_Soluciones_Moviles)**
+| Parte | Repositorio | Stack |
+| :--- | :--- | :--- |
+| 📱 **Frontend** | [**Frontend_Proyecto_Soluciones_Moviles**](https://github.com/DiegoCortes07/Frontend_Proyecto_Soluciones_Moviles) | React Native · Expo · TypeScript |
+| 🖥️ **Backend** | [**Backend_Proyecto_Soluciones_Moviles**](https://github.com/DiegoCortes07/Backend_Proyecto_Soluciones_Moviles) | Node.js · Express · Sequelize · JWT |
 
 ---
 
@@ -70,6 +73,8 @@ API REST con migraciones, seeds transaccionales, autenticación con bcrypt y una
 
 **[→ Ver repositorio](https://github.com/DiegoCortes07/Backend-Ayudantia-DSM)**
 
+
+---
 
 <div align="center">
 
